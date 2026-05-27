@@ -2,15 +2,23 @@ type ProjectCardProps = {
   title: string;
   description: string;
   tags: string[];
+  href?: string;
 };
 
 export default function ProjectCard({
   title,
   description,
   tags,
+  href,
 }: ProjectCardProps) {
-  return (
-    <article className="rounded-2xl border border-zinc-200 p-6">
+  const card = (
+    <article
+      className={
+        href
+          ? "h-full rounded-2xl border border-zinc-200 p-6 transition-colors hover:border-zinc-400"
+          : "h-full rounded-2xl border border-zinc-200 p-6"
+      }
+    >
       <h2 className="text-lg font-semibold tracking-tight">{title}</h2>
       <p className="mt-2 text-sm text-zinc-600">{description}</p>
       <div className="mt-4 flex flex-wrap gap-2">
@@ -25,4 +33,19 @@ export default function ProjectCard({
       </div>
     </article>
   );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        {card}
+      </a>
+    );
+  }
+
+  return card;
 }

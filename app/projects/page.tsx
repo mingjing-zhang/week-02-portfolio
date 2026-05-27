@@ -8,6 +8,7 @@ type Project = {
   title: string;
   description: string;
   tags: string[];
+  url?: string;
 };
 
 const projects: Project[] = [
@@ -17,26 +18,28 @@ const projects: Project[] = [
     description:
       "This site itself — built with Next.js App Router and Tailwind CSS as my Week 2 coursework project.",
     tags: ["JavaScript", "CSS"],
+    url: "https://github.com/mingjing-zhang/week-02-portfolio",
   },
   {
     id: 2,
-    title: "JavaScript Fundamentals Practice",
+    title: "Week 1 Personal Landing Page",
     description:
-      "A collection of small exercises covering arrays, objects, loops, and async/await from Week 2 coursework.",
-    tags: ["JavaScript"],
+      "A single-page personal site built with HTML and CSS for my Week 1 lab — practicing Flexbox layouts and the basics of semantic HTML.",
+    tags: ["CSS"],
+    url: "https://github.com/mingjing-zhang/week-01-lab",
   },
   {
     id: 3,
-    title: "Responsive Layout Challenge",
+    title: "JavaScript Fundamentals Practice",
     description:
-      "A mobile-first responsive page rebuilt from a design mockup using Flexbox and Grid.",
-    tags: ["CSS"],
+      "A counter and a small to-do list built with vanilla JavaScript and the DOM API. Coming soon.",
+    tags: ["JavaScript"],
   },
   {
     id: 4,
     title: "Python Data Explorer",
     description:
-      "A small command-line script that reads a CSV file and prints summary statistics — my first Python data project.",
+      "A small command-line script that reads a CSV file and prints summary statistics — my first Python data project. Coming soon.",
     tags: ["Python"],
   },
 ];
@@ -85,6 +88,7 @@ export default function Projects() {
             title={project.title}
             description={project.description}
             tags={project.tags}
+            href={project.url}
           />
         ))}
       </div>
