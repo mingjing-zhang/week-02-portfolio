@@ -1,19 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Week 2 Lab — From JavaScript to React
 
-## Getting Started
+This repo contains **both parts** of the Week 2 lab.
 
-First, run the development server:
+## Part 1 — Vanilla JavaScript (counter + to-do list)
+
+Folder: [`part1/`](./part1)
+
+- [`part1/index.html`](./part1/index.html) — HTML shell with counter buttons and to-do input
+- [`part1/script.js`](./part1/script.js) — `addEventListener` wiring for +1 / -1 / Reset, and `createElement` + `appendChild` for dynamic to-do items
+
+**To run:** open `part1/index.html` directly in a browser — no build step needed.
+
+## Part 2 — Next.js Portfolio Site
+
+The Next.js App Router project lives at the repo root (`app/`, `components/`, `public/`).
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+See [`SUBMISSION.md`](./SUBMISSION.md) for the full rubric checklist and screenshots.

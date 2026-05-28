@@ -1,8 +1,34 @@
-# Week 2 — Next.js Portfolio Site (Complete Submission)
+# Week 2 Lab — From JavaScript to React (Complete Submission)
 
 **Student:** Mingjing Zhang  
-**Course:** Full Stack Engineering — Week 2  
+**Course:** Full Stack Engineering — CSE552, Week 2  
 **GitHub repository:** https://github.com/mingjing-zhang/week-02-portfolio
+
+This repository covers **both parts** of the Week 2 lab.
+
+---
+
+## Part 1 — Vanilla JavaScript counter + to-do list
+
+Folder: [`part1/`](./part1)
+
+| File | What it demonstrates |
+|------|----------------------|
+| [`part1/index.html`](./part1/index.html) | HTML shell — `<div id="count-display">`, three counter buttons, to-do input + `<ul id="todo-list">` |
+| [`part1/script.js`](./part1/script.js) | **Counter:** `addEventListener("click", …)` on `#increment-btn`, `#decrement-btn`, `#reset-btn` updates a `count` variable and writes it to `display.textContent`. **To-do list:** click handler on `#add-btn` reads the input, calls `document.createElement("li")`, sets `textContent`, `appendChild`s it to `#todo-list`, then clears and refocuses the input. |
+
+**How to run Part 1:** open `part1/index.html` directly in a browser. No build step.
+
+Rubric coverage:
+
+| Criterion | Evidence |
+|---|---|
+| Counter works with event listeners | `part1/script.js` lines 10–23 — three `addEventListener("click", …)` handlers wired to the +1 / -1 / Reset buttons |
+| To-do list adds items dynamically | `part1/script.js` lines 30–39 — `createElement("li")` + `appendChild` on submit, with empty-input guard and input reset |
+
+---
+
+## Part 2 — Next.js Portfolio Site
 
 ### Screenshots folder (`screenshots/`)
 
@@ -55,6 +81,8 @@ The **Python** filter button is highlighted as the active state. Only the projec
 
 | Criteria | Status | Evidence |
 |---|---|---|
+| Part 1: Counter works with event listeners | ✅ | `part1/script.js` — three `addEventListener("click", …)` handlers on +1 / -1 / Reset, updating `display.textContent` |
+| Part 1: To-do list adds items dynamically | ✅ | `part1/script.js` — `createElement("li")` + `appendChild` on add, with empty-input guard |
 | Part 2: 3 pages created and navigable | ✅ | `app/page.tsx`, `app/about/page.tsx`, `app/projects/page.tsx`; nav defined in `app/layout.tsx` |
 | Part 2: Skills/projects rendered with `.map()` | ✅ | About skills loop + Projects card loop |
 | Part 2: Interactive filter using `useState` | ✅ | `app/projects/page.tsx` — `useState("All")` + conditional `.filter()` |
